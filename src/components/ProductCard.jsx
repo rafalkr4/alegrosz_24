@@ -9,6 +9,7 @@ import { faker } from "@faker-js/faker";
 import CardActions from "@mui/material/CardActions";
 import Grid from "@mui/material/Unstable_Grid2";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 function ProductCard({ product }) {
     return (
@@ -30,7 +31,9 @@ function ProductCard({ product }) {
                     </Typography>
                 </CardContent>
                 <CardActions>
-                    <Button size="small">See details</Button>
+                    <Link to={`/product-details/${product.id}`}>
+                        <Button size="small">See details</Button>
+                    </Link>
                 </CardActions>
             </Card>
         </Grid>
