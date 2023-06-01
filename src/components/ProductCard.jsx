@@ -3,6 +3,7 @@ import {
     Card,
     CardContent,
     CardMedia,
+    Chip,
     Typography,
 } from "@mui/material";
 import { faker } from "@faker-js/faker";
@@ -32,6 +33,11 @@ function ProductCard({ product }) {
                 <Link to={`/product-details/${product.id}`}>
                     <Button size="small">See details</Button>
                 </Link>
+                <Chip
+                    label={`$${product.price}`}
+                    variant="outlined"
+                    sx={{ marginRight: "20px" }}
+                />
             </CardActions>
         </Card>
     );
