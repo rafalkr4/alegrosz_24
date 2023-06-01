@@ -79,20 +79,26 @@ function ProductDetails() {
                             </CardContent>
                             <CardActions>
                                 <Link to={"/"}>
-                                    <Button size="small">Back</Button>
+                                    <Button size="small" variant="outlined">
+                                        Back
+                                    </Button>
                                 </Link>
 
                                 <Link to={`/product-edit/${product.id}`}>
                                     <Button
                                         size="small"
-                                        variant="outline"
+                                        variant="outlined"
                                         sx={{ marginRight: 1 }}
                                     >
                                         Edit {product.name}
                                     </Button>
                                 </Link>
 
-                                <Button onClick={deleteProduct} size="small">
+                                <Button
+                                    onClick={deleteProduct}
+                                    size="small"
+                                    variant="outlined"
+                                >
                                     Delete
                                 </Button>
                             </CardActions>
