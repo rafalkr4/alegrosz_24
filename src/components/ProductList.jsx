@@ -34,7 +34,7 @@ function ProductList({ products, search, sortByPrice }) {
 ProductList.propTypes = {
     products: PropTypes.array.isRequired,
     search: PropTypes.string.isRequired,
-    sortByPrice: PropTypes.number.isRequired,
+    sortByPrice: PropTypes.string.isRequired,
 };
 
 export default ProductList;
